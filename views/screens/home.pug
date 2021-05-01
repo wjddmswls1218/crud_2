@@ -5,7 +5,9 @@ block content
         form(action="/create", method="get")
             button(type="submit") 추가하기
 
+    h3 전체 메모의 수는 #{list.length} 개 입니다. 
     each data in list
+
         .main
             .main__desc #{data.description}
             .main__footer 
