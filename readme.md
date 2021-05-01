@@ -1,5 +1,5 @@
 # SCREENS
 
 - [ ]"/", home, menoList View
-- [ ]"/datail/:id", datail, memoDetail View
+- [ ]"/detail/:id", detail, memoDetail View
 - [ ]"/create", create, memCreate View

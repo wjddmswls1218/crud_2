@@ -2,11 +2,15 @@ extends ../layouts/main.pug
 
 block content
     .detailBox 
-        h2 메모 상세보기
-        form(action="#", method="post")
-            textarea(name="desc",placeholed="description..." )
-            button(type="submit") 삭제
-        form(action="/", method="post")
+        h2 메모 상세보기 
+        form(action="/postUpdate", method="post")
+            input(type="hidden" name="id" value=data._id)
+            textarea(name="desc",placeholed="description..." ) #{data.description}
             button(type="submit") 수정
+
+        form(action="/postDelete", method="post")
+            input(type="hidden" name="id" value=data._id)
+            button(type="submit") 삭제
+
         form(action="/", method="get")
             button(type="submit") 목록으로

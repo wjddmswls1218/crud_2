@@ -4,8 +4,11 @@ block content
     .top
         form(action="/create", method="get")
             button(type="submit") 추가하기
-    .main
-        .main__desc Desc
-        .main__footer 
-            form(action="/detail", method="get")
-                button(type="submit") 상세보기
+
+    each data in list
+        .main
+            .main__desc #{data.description}
+            .main__footer 
+                form(action=`/detail`, method="get")
+                    input(type="hidden" name="id" value=data._id)
+                    button(type="submit") 상세보기
